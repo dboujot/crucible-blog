@@ -24,6 +24,10 @@ class MainSectionController {
   handleChange(id) {
     this.todos = this.todoService.completeTodo(id, this.todos);
   }
+  
+  handleRepone(id) {
+	this.todos = this.todoService.reopenTodo(id);
+  }
 
   handleSave(e) {
     if (e.text.length === 0) {

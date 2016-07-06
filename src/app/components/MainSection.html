@@ -12,6 +12,7 @@
       on-destroy="$ctrl.handleDestroy(id)"
       on-change="$ctrl.handleChange(id)"
       on-save="$ctrl.handleSave(todo)"
+	  on-repoen="$ctrl.handleRepone(id)"
     ></todo-item>
   </ul>
   <footer-component ng-if="$ctrl.todos.length"

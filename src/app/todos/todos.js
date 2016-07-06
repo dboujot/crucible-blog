@@ -14,6 +14,14 @@ export class TodoService {
       }
     ].concat(todos);
   }
+  
+  reopenTodo(id, todos) {
+	  return todos.map(todo => {
+      return todo.id == id ?
+        Object.assign({}, todo, {completed: false, reopen : true}) :
+        todo;
+    });
+  }
 
   completeTodo(id, todos) {
     return todos.map(todo => {

@@ -11,6 +11,7 @@
       type="checkbox"
       ng-checked="$ctrl.todo.completed"
       ng-click="$ctrl.onChange({id: $ctrl.todo.id})"
+	  ng-class="'reopen' : $ctrl.todo.repoen"
       />
     <label ng-dblclick="$ctrl.handleDoubleClick()">{{$ctrl.todo.text}}</label>
     <button class="destroy" ng-click="$ctrl.handleDestroy($ctrl.todo.id)"></button>
